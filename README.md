@@ -57,7 +57,7 @@
 ```
 
 ### 通用适配器制造`Adapter`
-使用大量的OO的设计原则，把打造了一个通用的牛B的适配器。自己都有点膜拜自己。
+使用大量的OO的设计原则，打造了一个通用的牛B的适配器。自己都有点膜拜自己。
 
 ``` java
       CommonAdapter<String> adapter = new CommonAdapter<String>(context,mDatas,R.layout.item_lsit)
@@ -65,9 +65,11 @@
             @Override
             public void convert(ViewHolder viewHolder, String item)
             {
-                TextView view = viewHolder.getView(R.id.tv_title);
-                view.setText(item);
+                viewHolder.setText(item);
             }
         };
         listview.setAdapter(adapter);
 ```
+
+### 添加网络加载框架。
+binMapFun。 google提供的。发现还有许多参数没有设置
