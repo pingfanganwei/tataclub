@@ -1,3 +1,9 @@
+
+
+http://blog.csdn.net/ohmygirl/article/details/17846199
+
+UI流程图
+
 # tataclub
 高纺她他社框架
 
@@ -16,13 +22,13 @@
         android:layout_width="match_parent"
         android:layout_height="160dp"
         tools:context=".MainActivity" >
-
+    
         <com.itheima.autoscroll.view.AutoScrollViewPager
             android:id="@+id/sroll_viewpager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#47659E" />
-
+    
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,7 +36,7 @@
             android:background="#431E15"
             android:orientation="horizontal" >
             <!-- 标题 -->
-
+    
             <TextView
                 android:id="@+id/titleview"
                 android:layout_width="0dp"
@@ -41,7 +47,7 @@
                 android:text="习近平去了美国看到凤姐没?"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp" />
-
+    
             <LinearLayout
                 android:id="@+id/layout_dots"
                 android:layout_width="wrap_content"
@@ -51,8 +57,23 @@
             </LinearLayout>
             <!-- 指示点 -->
         </LinearLayout>
-
-    </RelativeLayout>
+    
+    </RelativeLayout>    
 ```
 
 
+### 通用适配器制造`Adapter`
+使用大量的OO的设计原则，把打造了一个通用的牛B的适配器。自己都有点膜拜自己。
+
+``` java
+      CommonAdapter<String> adapter = new CommonAdapter<String>(context,mDatas,R.layout.item_lsit)
+        {
+            @Override
+            public void convert(ViewHolder viewHolder, String item)
+            {
+                TextView view = viewHolder.getView(R.id.tv_title);
+                view.setText(item);
+            }
+        };
+        listview.setAdapter(adapter);
+```
