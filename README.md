@@ -1,9 +1,4 @@
 
-
-http://blog.csdn.net/ohmygirl/article/details/17846199
-
-UI流程图
-
 # tataclub
 高纺她他社框架
 
@@ -60,7 +55,6 @@ UI流程图
     
     </RelativeLayout>    
 ```
-
 
 ### 通用适配器制造`Adapter`
 使用大量的OO的设计原则，把打造了一个通用的牛B的适配器。自己都有点膜拜自己。

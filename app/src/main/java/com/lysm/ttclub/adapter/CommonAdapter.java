@@ -36,6 +36,7 @@ public abstract class CommonAdapter<T> extends BaseAdapter
         this.mContext = context;
         this.mDatas = mDatas;
         this.itemLayoutId = itemLayoutId;
+
     }
 
     @Override

@@ -2,12 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:gravity="center_vertical"
-              android:orientation="vertical"
+              android:orientation="horizontal"
               android:background="@color/base_purple_Color"
               android:layout_height="70dp">
     <TextView
         android:id="@+id/tv_title"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:background="#aa111111"
         android:gravity="center_vertical"
@@ -16,6 +16,14 @@
         android:text="hello"
         android:textSize="20sp"
         android:textStyle="bold"
+        />
+
+    <ImageView
+        android:id="@+id/image"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/about"
         />
 
 </LinearLayout>
