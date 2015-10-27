@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <FrameLayout
+        android:id="@+id/fl_fragment_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RadioGroup
+        android:id="@+id/rg_bottom_group"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb_ttclub"
+            style="@style/BottomTab"
+            android:drawableTop="@drawable/ttclub_select"
+            android:text="她他社"
+
+            />
+        <RadioButton
+            android:id="@+id/rb_yuanchuangshe"
+            style="@style/BottomTab"
+            android:drawableTop="@drawable/yuanchuangshe_select"
+            android:text="原创社"
+            />
+        <RadioButton
+            android:id="@+id/rb_fulishe"
+            style="@style/BottomTab"
+            android:drawableTop="@drawable/fulisshe_select"
+            android:text="福利社"
+            />
+        <RadioButton
+            android:id="@+id/rb_me"
+            style="@style/BottomTab"
+            android:drawableTop="@drawable/me_select"
+            android:text="我"
+            />
+
+    </RadioGroup>
+
+
+</LinearLayout>
