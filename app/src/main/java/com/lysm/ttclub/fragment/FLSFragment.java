@@ -46,7 +46,7 @@ public class FLSFragment extends BaseFargment
             public void convert(ViewHolder viewHolder, String item)
             {
                 //这里的Item做许多优化
-               viewHolder.setText(R.id.tv_title,item);
+                viewHolder.setText(R.id.tv_title,item);
                 viewHolder.setImageByUrl(R.id.image,"https://github.com/nostra13/Android-Universal-Image-Loader/raw/master/wiki/UIL_Flow.png");
             }
         };

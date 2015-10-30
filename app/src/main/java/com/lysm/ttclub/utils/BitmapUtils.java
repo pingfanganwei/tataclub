@@ -1,6 +1,7 @@
 package com.lysm.ttclub.utils;
 
 import android.content.Context;
+import android.view.View;
 
 import com.example.android.bitmapfun.util.*;
 import com.example.android.bitmapfun.util.ImageCache;
@@ -15,6 +16,8 @@ public class BitmapUtils
 {
 
     private static ImageFetcher mImageFetcher = null;
+    private static Context context;
+
     /**
      * get Single ImageLoader
      * @return ImageLoader
@@ -26,7 +29,7 @@ public class BitmapUtils
             // 单列枷锁
             synchronized (ImageFetcher.class)
             {		// 创建抓取器实例
-                Context context = BaseApplication.getContext();
+                context = BaseApplication.getContext();
                 mImageFetcher = new ImageFetcher(BaseApplication.getContext(), 100, 100);
                 // 创建参数配置对象:包含 重要参数
                 // ImageCache cacheOption=new ImageCache(this, 图片保存文件夹名字);//http shop linux文件名不能包含 ://==>urlEnocde
@@ -37,5 +40,11 @@ public class BitmapUtils
             }
         }
         return mImageFetcher;
+    }
+
+    public static void cleancache(View view)
+    {
+        //File
+        DiskLruCache.clearCache(context, "tataCache");
     }
 }

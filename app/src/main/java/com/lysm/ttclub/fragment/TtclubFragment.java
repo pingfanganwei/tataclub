@@ -83,9 +83,9 @@ public class TtclubFragment extends BaseFargment implements View.OnClickListener
         fragList.add(new TansuoFragment());
         fragList.add(new GuanzhuFragment());
 
-        MyVPAdapter adapter = new MyVPAdapter(activity.getSupportFragmentManager(),fragList);
-        viewPager.setAdapter(adapter);
-    }
+    MyVPAdapter adapter = new MyVPAdapter(activity.getSupportFragmentManager(),fragList);
+    viewPager.setAdapter(adapter);
+}
 
     @Override
     public void onClick(View v) {

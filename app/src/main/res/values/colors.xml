@@ -2,4 +2,9 @@
 <resources>
     <color name="base_purple_Color">#C74BCC</color>
     <color name="defualt_Color">#888888</color>
+
+    <color name="header_normal">#ffe74c3c</color>
+    <color name="header_pressed">#ffc0392b</color>
+    <color name="menu_section_header">#FFDDDDDD</color>
+
 </resources>

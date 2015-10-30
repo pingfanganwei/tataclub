@@ -8,9 +8,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.lysm.ttclub.utils.BitmapUtils;
-import com.lysm.ttclub.utils.LogUitls;
-
 /**
  * 打造
  * Created by H_lang on 2015/10/27.
@@ -18,7 +15,7 @@ import com.lysm.ttclub.utils.LogUitls;
 public class ViewHolder
 {
     /**
-     * 我这里采用稀疏数组排列方式，  比Map更有速度优势，
+     * 我这里采用稀疏数组排列方式、Key是整型
      */
     private final SparseArray<View> mViews;
     private View mConvertView;
@@ -80,7 +77,7 @@ public class ViewHolder
     /**
      * 设置文字，图片
      *
-     * @param viewId
+     * @param viewId·
      * @param text
      * @return
      */
@@ -116,8 +113,8 @@ public class ViewHolder
     public ViewHolder setImageByUrl(int viewId,String url)
     {
         ImageView view = getView(viewId);
-        LogUitls.i("xbl",url);
-        BitmapUtils.getImageFetcher().loadImage(url,view);
+
+      // BitmapUtils.getImageFetcher().loadImage(url,view);
         return this;
     }
 

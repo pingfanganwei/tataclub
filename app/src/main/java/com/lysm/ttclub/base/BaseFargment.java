@@ -16,7 +16,6 @@ import com.lysm.ttclub.activity.MainActivity;
 public abstract class BaseFargment extends Fragment
 {
     public MainActivity activity;
-
 	public void loadImage(String url, ImageView img)
 	{
 
@@ -40,26 +39,32 @@ public abstract class BaseFargment extends Fragment
 		return dm.widthPixels;// dp--> px
 	}
 
+    @Override
+    public void onStart()
+    {
 
-	public View rootView; // 根布局
+        super.onStart();
+    }
+
+    public View rootView; // 根布局
 	private Context mContext;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 	{
+        if (rootView == null)
+        {
+            rootView = View.inflate(getActivity(), getLayoutId(), null);
+            ininView();
+        } else
+        {
+            ViewGroup parent = (ViewGroup) rootView.getParent();
+            if (parent != null)
+            {
+                parent.removeView(rootView);
+            }
+        }
 
-		if (rootView == null)
-		{
-			rootView = View.inflate(getActivity(), getLayoutId(), null);
-			ininView();
-		} else
-		{
-			ViewGroup parent = (ViewGroup) rootView.getParent();
-			if (parent != null)
-			{
-				parent.removeView(rootView);
-			}
-		}
 		return rootView;
 	}
 

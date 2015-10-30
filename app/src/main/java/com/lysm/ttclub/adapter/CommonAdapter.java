@@ -28,7 +28,7 @@ public abstract class CommonAdapter<T> extends BaseAdapter
      *
      * @param context
      * @param mDatas 填充数据
-     * @param itemLayoutId 列表布局
+     * @param itemLayoutId 列表项布局
      */
     public CommonAdapter(Context context, List<T> mDatas, int itemLayoutId)
     {
@@ -60,7 +60,8 @@ public abstract class CommonAdapter<T> extends BaseAdapter
     @Override
     public View getView(int position, View convertView, ViewGroup parent)
     {
-        ViewHolder viewHolder = getViewHolder(position,convertView,parent);
+        ViewHolder viewHolder = ViewHolder.get(mContext, convertView, parent, itemLayoutId, position);
+
         convert(viewHolder, getItem(position));
         return viewHolder.geteConvertView();
     }
@@ -71,15 +72,6 @@ public abstract class CommonAdapter<T> extends BaseAdapter
      */
     public abstract void convert(ViewHolder viewHolder, T item);
 
-    /**
-     * 获取一个ViewHolder
-     * @param position
-     * @param convertView
-     * @param parent
-     * @return
-     */
-    private ViewHolder getViewHolder(int position, View convertView, ViewGroup parent)
-    {
-      return ViewHolder.get(mContext, convertView, parent,itemLayoutId, position);
-    }
+
+
 }

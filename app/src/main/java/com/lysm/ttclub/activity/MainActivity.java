@@ -1,5 +1,8 @@
 package com.lysm.ttclub.activity;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 import android.widget.RadioGroup;
@@ -47,6 +50,8 @@ public class MainActivity extends BaseFragmentActivity {
     {
         rgGroup.setOnCheckedChangeListener(MyChangeListener);
         rgGroup.check(R.id.rb_ttclub);
+
+
     }
 
     /**
